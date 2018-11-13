@@ -50,7 +50,7 @@ public class MultiplyTest {
     }
 
     @Test
-    public void testMultiply1() {
+    public void testMultiply10() {
         System.out.println("multiply");
         String a = "2";
         String b = "3";
@@ -60,7 +60,7 @@ public class MultiplyTest {
     }
 
     @Test
-    public void testMultiply2() {
+    public void testMultiply20() {
         System.out.println("multiply");
         String a = "2";
         String b = "3";
@@ -109,4 +109,33 @@ public class MultiplyTest {
         int result = Multiply.result1;
         assertNotEquals(expResult, result);
     }
+    @Test
+    public void testMultiply7()
+    {
+         String x="bonjour";
+         String y="student";
+         int sort= 1;
+         Multiply.multiply(x, y);
+         int r=Multiply.result1;
+         assertNotEquals(sort,r);
+    }
+    @Test
+    public void testMultiply8()
+    {
+        String k="2";
+        String b="4";
+        String sorted ="8";
+        String expect=Multiply.multiply(k, b);
+        assertEquals(expect,sorted);
+    }
+    @Test
+    public void testMultiply9()
+    {
+        String a="5";
+        String b="dakar";
+        String r="oui";
+        String expect =Multiply.multiply(a,b);
+        assertNotEquals(expect,r);
+    }
+    
 }
