@@ -13,20 +13,11 @@ public class Multiply {
 
     public static String multiply(String a, String b) {
 
-        int inta = Integer.getInteger(a);
-        int intb = Integer.getInteger(b);
+        // Integer.getInteger doesn't convert String to integer!!
+        // https://docs.oracle.com/javase/6/docs/api/java/lang/Integer.html#getInteger%28java.lang.String%29
 
-        int inta1 = 0;
-        int intb1 = 0;
-        for (int i = 0; i < a.length(); i++) {
-            inta1 += a.charAt(i);
-        }
-        for (int i = 0; i < b.length(); i++) {
-            intb1 += b.charAt(i);
-        }
-
-        result1 = inta1 * intb1;
-
+        int inta = Integer.parseInt(a);
+        int intb = Integer.parseInt(b);
         int result = inta * intb;
 
         return String.valueOf(result);
