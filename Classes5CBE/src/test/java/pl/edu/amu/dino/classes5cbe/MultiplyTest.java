@@ -70,56 +70,6 @@ public class MultiplyTest {
     }
 
     @Test
-    public void testMultiply3() {
-        System.out.println("multiply");
-        String a = "2";
-        String b = "a";
-        String expResult = null;
-        String result = Multiply.multiply(a, b);
-        assertEquals(expResult, result);
-    }
-
-    @Test
-    public void testMultiply4() {
-        String a = "Hello";
-        String b = "World";
-        int expResult = 260000;
-        Multiply.multiply(a, b);
-        int result = Multiply.result1;
-        assertEquals(expResult, result);
-
-    }
-
-    @Test
-    public void testMultiply5() {
-        String a = "Software";
-        String b = "Engineering";
-        int expResult = 953433;
-        Multiply.multiply(a, b);
-        int result = Multiply.result1;
-        assertEquals(expResult, result);
-    }
-
-    @Test
-    public void testMultiply6() {
-        String a = "Hello";
-        String b = "Engineering";
-        int expResult = 2;
-        Multiply.multiply(a, b);
-        int result = Multiply.result1;
-        assertNotEquals(expResult, result);
-    }
-    @Test
-    public void testMultiply7()
-    {
-         String x="bonjour";
-         String y="student";
-         int sort= 1;
-         Multiply.multiply(x, y);
-         int r=Multiply.result1;
-         assertNotEquals(sort,r);
-    }
-    @Test
     public void testMultiply8()
     {
         String k="2";
@@ -128,14 +78,16 @@ public class MultiplyTest {
         String expect=Multiply.multiply(k, b);
         assertEquals(expect,sorted);
     }
-    @Test
-    public void testMultiply9()
-    {
-        String a="5";
-        String b="dakar";
-        String r="oui";
-        String expect =Multiply.multiply(a,b);
-        assertNotEquals(expect,r);
+
+    // Removed redundant test, added one, which tests everything that previous tests intended to do (but failed to in
+    // sense of actual implementation or their initial conception)
+
+    @Test(expected = NumberFormatException.class)
+    public void stringsContainingOnlyLettersShouldRaiseException() {
+        System.out.println("Inputting foo and bar into multiply()...");
+        String a = "foo";
+        String b = "bar";
+        Multiply.multiply(a, b);
     }
-    
+
 }
