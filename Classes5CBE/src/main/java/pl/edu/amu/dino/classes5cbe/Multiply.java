@@ -22,4 +22,12 @@ public class Multiply {
 
         return String.valueOf(result);
     }
+
+    public static String appendStrings(String a, String b) {
+        StringBuilder value = new StringBuilder();
+        value.append(a);
+        value.append(b);
+        return value.toString();
+    }
+
 }
