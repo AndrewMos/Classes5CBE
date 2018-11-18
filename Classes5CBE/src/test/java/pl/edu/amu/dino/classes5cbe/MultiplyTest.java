@@ -81,13 +81,38 @@ public class MultiplyTest {
 
     // Removed redundant test, added one, which tests everything that previous tests intended to do (but failed to in
     // sense of actual implementation or their initial conception)
-
-    @Test(expected = NumberFormatException.class)
-    public void stringsContainingOnlyLettersShouldRaiseException() {
-        System.out.println("Inputting foo and bar into multiply()...");
-        String a = "foo";
-        String b = "bar";
-        Multiply.multiply(a, b);
+    
+    @Test
+    public void testMultiply30()
+    {
+        String a = "2";
+        String b = "000000010";
+        String expectResult = "20";
+        String result = Multiply.multiply(a,b);
+        assertEquals(expectResult,result);
     }
+    
+    public void testMultiply31()
+    {
+        String h = "Hi";
+        String b = "Bye";
+        String expect = "33";
+        String result = Multiply.multiply(h,b);
+        assertNotEquals(expect,result);
+    }
+    
+    public void testMultiply32()
+    {
+        String first = "Hello";
+        String second = "World";
+        String expectResult = "167";
+        String result = Multiply.multiply(first,second);
+        assertEquals(expectResult,result);
+    }
+       
+       
+        
+        
+ 
 
 }
