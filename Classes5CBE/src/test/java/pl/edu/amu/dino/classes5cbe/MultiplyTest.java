@@ -90,4 +90,12 @@ public class MultiplyTest {
         Multiply.multiply(a, b);
     }
 
+    @Test(expected = NumberFormatException.class)
+    public void stringsContainingHexNumbersShouldRaiseException(){
+        System.out.println("Input 2C and F in multiply");
+        String a= "2C";
+        String b= "F";
+        Multiply.multiply(a,b);
+    }
+
 }
