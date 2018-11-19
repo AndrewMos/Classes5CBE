@@ -27,17 +27,47 @@ public class MultiplyTest {
         assertNotEquals(expResult, result);
 
     }
+     @Test
+    public void testMultiply100() {
+        System.out.println("multiply");
+        String a = "2";
+        String b = "4";
+        String expResult = "1";
+        String result = Multiply.multiply(a, b);
+        assertNotEquals(expResult, result);
 
-    @Test
-    public void testMultiply1() {
-        System.out.println("multiply1");
+    }
+     @Test
+    public void testMultiply130() {
+        System.out.println("multiply");
         String a = "2";
         String b = "3";
+        String expResult = "1";
+        String result = Multiply.multiply(a, b);
+        assertNotEquals(expResult, result);
+
+    }
+
+    @Test
+    public void testMultiply101() {
+        System.out.println("multiply1");
+        String a = "2";
+        String b = "30";
         String expResult = "6";
         String result = Multiply.multiply(a, b);
         assertEquals(expResult, result);
     }
+     @Test
+    public void testMultiply200() {
+        System.out.println("multiply");
+        String a = "12";
+        String b = "3";
+        String expResult = "1";
+        String result = Multiply.multiply(a, b);
+        assertNotEquals(expResult, result);
 
+    }
+    
     @Test
     public void testMultiply2() {
         System.out.println("multiply2");
