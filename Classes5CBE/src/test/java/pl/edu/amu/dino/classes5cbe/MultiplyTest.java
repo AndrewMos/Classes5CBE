@@ -97,5 +97,12 @@ public class MultiplyTest {
         String b= "F";
         Multiply.multiply(a,b);
     }
+    @Test(expected = NumberFormatException.class)
+    public void StringsthatContainNumbersandSymbolsRaiseException(){
+        System.out.println("Input 2% and 12$");
+        String a= "2%";
+        String b= "12$";
+        Multiply.multiply (a,b);
+    }
 
 }
